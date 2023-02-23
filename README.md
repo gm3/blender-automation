@@ -1,4 +1,4 @@
-```
+```python
 import bpy
 import os
 import random
@@ -36,6 +36,4 @@ for filename in os.listdir(vrm_directory):
         # Remove the VRM object from the scene
         bpy.ops.object.select_all(action='SELECT')
         bpy.ops.object.delete(use_global=False)
-        
-        
 ```
