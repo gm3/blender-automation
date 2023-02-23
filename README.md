@@ -1,6 +1,6 @@
 # Blender Automation Scripts
 
-Convert and pose all VRMS and export as GLB
+Convert and pose all VRMS and export as GLB 
 
 ```
 import bpy
@@ -40,3 +40,5 @@ for filename in os.listdir(vrm_directory):
         
         
 ```
+
+(created with chatGPT, work in progress for open source research)
