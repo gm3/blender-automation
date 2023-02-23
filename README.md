@@ -1,17 +1,15 @@
-# Blender Automation Scripts
-
-Convert and pose all VRMS and export as GLB 
-
-```
 import bpy
 import os
 import random
 
-# Set the directory path for the VRM files
-vrm_directory = '/path/to/vrm/files'
+# Get the directory path for the blend file
+blend_directory = os.path.dirname(bpy.data.filepath)
 
-# Set the directory path for the output GLB files
-output_directory = '/path/to/output/files'
+# Set the directory path for the VRM files (same as blend file directory)
+vrm_directory = blend_directory
+
+# Set the directory path for the output GLB files (same as blend file directory)
+output_directory = blend_directory
 
 # Set the array of Mixamo animation names to randomly select from
 animation_names = ['Breathing Idle', 'Dance', 'Jump', 'Punching', 'Running', 'Walking']
@@ -37,8 +35,3 @@ for filename in os.listdir(vrm_directory):
         # Remove the VRM object from the scene
         bpy.ops.object.select_all(action='SELECT')
         bpy.ops.object.delete(use_global=False)
-        
-        
-```
-
-(created with chatGPT, work in progress for open source research)
